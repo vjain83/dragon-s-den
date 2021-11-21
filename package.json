@@ -1,0 +1,25 @@
+{
+  "name": "dragon-s-den",
+  "version": "1.0.0",
+  "description": "A personnel book library",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjain83/dragon-s-den.git"
+  },
+  "author": "Varsha Jain, Robert Williams, Daniel Subramanian, Christian Espejo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vjain83/dragon-s-den/issues"
+  },
+  "homepage": "https://github.com/vjain83/dragon-s-den#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1"
+  }
+}
