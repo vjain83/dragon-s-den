@@ -1,10 +1,9 @@
-
 const express = require('express');
 // connection with the routes folder
 const routes = require('./routes');
 // connection with sequelize
 const sequelize = require('./config/connection');
-const router = require('./routes');
+
 
 
 const app = express();
