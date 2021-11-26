@@ -27,9 +27,17 @@ Book.init(
             last_name: DataTypes.STRING
         },
 
-        publish: {
+        isbn: {
             type: DataTypes.INTEGER
-        }
+        },
+        genre: {
+            type: DataTypes.STRING
+
+        },
+
+        edition: {
+            type: DataTypes.INTEGER
+        },
 
     },
     {

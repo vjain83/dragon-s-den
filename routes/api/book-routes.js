@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Book } = require('../../models/index')
+const { Book, Review, Reader } = require('../../models')
 
 //get api/books routes
 
@@ -13,10 +13,22 @@ router.get('/', (req, res) => {
 })
 //get api/books/1 routes
 router.get('/:id', (req, res) => {
-    UPSERT.findOne({
+    Book.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: Review,
+                attributes: ['id', 'review_text', 'created_at'],
+                include: {
+                    model: Reader,
+                    attributes: ['fullname']
+                }
+
+            }
+        ]
+
     }).then(dbBookData => {
         if (!dbBookData) {
             res.status(404)({ message: 'No data Found' });
@@ -36,7 +48,9 @@ router.post('/', (req, res) => {
     Book.create({
         title: req.body.title,
         author: req.body.author,
-        publish: req.body.publish
+        isbn: req.body.isbn,
+        genre: req.body.genre,
+        edition: req.body.edition
 
     }).then(dbBookData => {
         console.log(dbBookData)
@@ -49,11 +63,40 @@ router.post('/', (req, res) => {
 
 //update api/books/1 routes
 router.put('/:id', (req, res) => {
+    Book.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    }).then(dbBookData => {
+        if (!dbBookData[0]) {
+            res.status(404).json({ message: 'No data found' })
+            return
+        }
+        res.json(dbBookData);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json
+    })
 
 })
 
 //delet api/books/1 routes
 router.delete('/:id', (req, res) => {
+    Book.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(dbBookData => {
+        if (!dbBookData) {
+            res.status(404).json({ message: 'No data found with this id' });
+            return;
+        }
+        res.json(dbBookData);
+    })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
 
 })
 
