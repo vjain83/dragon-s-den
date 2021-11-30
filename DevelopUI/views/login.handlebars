@@ -1,4 +1,4 @@
-<form action="action_page.php" method="post">
+<form role="form" enctype="application/x-www-form-urlencoded">
     <div class="container">
         <h3>Login</h3>
         <p>Hello {{userName}}</p>
@@ -14,9 +14,10 @@
         <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
 
+{{!-- After pressing the login button, the user should be taken to the selctiion page. --}}
         <div>
-            <button type="submit" class="login"> Login</button>
-            <button type="button" class="cancelbtn">Cancel</button>
+            <button formacation="/login" formmethod="post" type="submit" class="loginbtn"> Login</button>
+            <button type="reset" class="cancelbtn">Cancel</button>
         </div>
         <div>
             <span class="psw">Forgot <a href="#">password?</a></span>

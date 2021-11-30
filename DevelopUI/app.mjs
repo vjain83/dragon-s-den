@@ -16,6 +16,7 @@ app.get("/", function(req, res) {
     res.render("landing");
 });
 
+//This snipbit captures the input from the forms and logs them, ready to be sent to the server
 app.post("/", function(req, res) {
     var body = req.body;
     console.log(body.fname);
@@ -28,14 +29,33 @@ app.post("/", function(req, res) {
     res.render("login", name);
 });
 
+//Function which takes you to the signup page. The first line is the command executed by the button called signup, which takes you to the rendering (view) of the signup page.
 app.get("/signup", function(req, res) {
     res.render("signup");
 });
 
+//Function which takes you to the login page. The first line is the command executed by the button called login, which takes you to the rendering (view) of the login page.
 app.get("/login", function(req, res) {
     var name = { userName: "stranger" }
     res.render("login", name);
 });
+
+//Function which takes you to the selection page. The first line is the command executed by the button called login, which takes you to the rendering (view) of the selection page.
+app.post("/login", function(req, res) {
+    var body = req.body;
+    console.log(body.uname);
+    res.render("selection");
+})
+
+//This snipbit of code operates the drop down menu of the selection page. If you choose Comment, it takes you to the comment page, if you choose research, it takes you to the research page.
+app.post("/finalpage", function(req, res) {
+    var body = req.body;
+    if (body.selection === 'c') {
+        res.render("comment");
+    } else {
+        res.render("research");
+    }
+})
 
 app.listen(port, () => {
     console.log(`HTTP Server running at http://localhost:${port}`);

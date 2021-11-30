@@ -18,22 +18,46 @@
             Welcome to Dragon's Den, where learned peopled provide insight
         </h2>
     </header>
-    <!-- All three pages are the same up to this point -->
+    <!-- Head and header shares code across all pages -->
 
     <main>
-        <div class="container">
-            <h3>Next Step</h3>
-            <p>Please select whether you wish to provide comments or research other people's comments.</p>
-            <hr>
-            <div>
-                <button type="submit" class="research"> Research</button>
-                <button type="submit" class="research"> Comment</button>
-                <button type="button" class="cancelbtn">Cancel</button>
+        <form>
+            <div class="container">
+                <h3>Next Step</h3>
+                <p>Please select whether you wish to provide comments on a book, or whether you wish to research other people's comments.</p>
+                <hr>
+
+                <div>
+                    <div>
+                        <div class="columnLeft">
+                            <label class=" px-2" for="authorTitle"><b>Kindly select comment or research:</b></label>
+                        </div>
+                        <div class="columnRight">
+                            <select name="authorTitle" id="select" class=" px-3">
+                            <option value="" disabled selected>Select your choice of action</option>
+                            <option value="R">Comment</option>
+                            <option value="C">Research</option>
+                        </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="authorTitle"><b>Please write the name of author or title you wish to comment or research.</b></label>
+                        <input type="text" placeholder="Enter name of author or title of book" name="authorTitle" required>
+                    </div>
+                </div>
+
+
+                <div>
+                    <button type="submit" class="commentbtn"> Comment</button>
+                    <button type="submit" class="researchbtn"> Research</button>
+                    <button type="reset" class="cancelbtn">Cancel</button>
+                </div>
             </div>
-        </div>
+        </form>
 
 
-        <!-- Footer sahres the code across all three pages  -->
+        <!-- Footer shares code across all pages  -->
         <footer>
             <div>
                 <h4> Developed by Team Percy Jackson</h4>
