@@ -8,7 +8,7 @@ const bookdata = [
     isbn: '9780486406510',
     edition: '1998',
     genre: 'Historical Fiction',
-  },
+},
   {
     title: 'The Hobbit',
     author: 'J.R.R.Tolkien',
@@ -172,6 +172,6 @@ const bookdata = [
   },
 ];
 
-const seedBook = () => Post.bulkCreate(postdata);
+const seedBook = () => Post.bulkCreate(bookdata);
 
 module.exports = seedBook;
