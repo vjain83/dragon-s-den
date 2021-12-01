@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Dragon's Den</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Dragon's Den
+        </h1>
+        <h2>
+            Welcome to Dragon's Den, where learned peopled provide insight
+        </h2>
+    </header>
+    <!-- Head and header shares code across all pages -->
+
+    <!-- Start of the signup page -->
+    <main>
+        <div>
+            <form action="action_page.php" method="post">
+                <div class="container">
+                    <h3>Sign Up</h3>
+                    <p>Please complete this form to create an account.</p>
+                    <hr>
+
+                    <label for="fname"><b>Full Name</b></label>
+                    <input type="text" placeholder="Enter First & Last Name" name="fname" required>
+
+                    <label for="email"><b>Email - Username</b></label>
+                    <input type="text" placeholder="Enter Email - it will be your username" name="email" required>
+
+                    <label for="bcaffil"><b>Book Club</b></label>
+                    <input type="text" placeholder="Enter Book Club Affiliation" name="bcaffil" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Select Password" name="psw" required>
+
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                        <button type="reset" class="cancelbtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End of the signup page -->
+
+        <!-- Footer shares code across all pages  -->
+        <footer>
+            <div>
+                <h4> Developed by Team Percy Jackson</h4>
+                <a href="./privacy-policy.html">Read Our Privacy Policy</a><br /> &copy; 2021 Dragon's Den, Inc.
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>

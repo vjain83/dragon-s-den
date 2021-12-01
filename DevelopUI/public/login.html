@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Dragon's Den</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Dragon's Den
+        </h1>
+        <h2>
+            Welcome to Dragon's Den, where learned peopled provide insight
+        </h2>
+    </header>
+    <!-- Head and header shares code across all pages -->
+
+    <!-- Start of the login page -->
+    <main>
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <h3>Login</h3>
+                <p>Please complete in order to login.</p>
+                <hr>
+
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+
+                <div>
+                    <button type="submit" class="loginbtn"> Login</button>
+                    <button type="reset" class="cancelbtn">Cancel</button>
+                </div>
+                <div>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </div>
+            <br>
+        </form>
+        <!-- End of the login page -->
+
+        <!-- Footer shares code across all pages  -->
+        <footer>
+            <div>
+                <h4> Developed by Team Percy Jackson</h4>
+                <a href="./privacy-policy.html">Read Our Privacy Policy</a><br /> &copy; 2021 Dragon's Den, Inc.
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
