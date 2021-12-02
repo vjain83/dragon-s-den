@@ -24,7 +24,16 @@ router.post('/', (req, res) => {
         username: req.body.username,
         password: req.body.password
     })
-        .then(dbReaderData => res.json(dbReaderData))
+        .then(dbReaderData => {
+            console.log("Req session is ", req.session)
+            req.session.save(() => {
+                req.session.reader_id = dbReaderData.id;
+                req.session.username = dbReaderData.username;
+                req.session.loggedIn = true;
+
+                res.json(dbReaderData);
+            })
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -119,11 +128,31 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
-        res.json({ reader: dbReaderData, message: 'You are logged in ' });
-    })
-})
+        req.session.save(() => {
+            // declare session variables
+            req.session.reader_id = dbReaderData.id;
+            req.session.username = dbReaderData.username;
+            req.session.loggedIn = true;
 
+            res.json({ reader: dbReaderData, message: 'You are now logged in!' });
+        });
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
+
+});
 
 
 module.exports = router;
