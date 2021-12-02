@@ -1,1 +1,39 @@
-<h1>Research Page Here</h1>
+<form role="form" enctype="application/x-www-form-urlencoded">
+    <div class="container">
+        <h3>Research Page</h3>
+        <p>Please find below the books written by your chosen author. Kindly select the book you wish to research.</p>
+        <hr>
+
+        <table>
+            <colgroup>
+            <thead>
+                <tr>
+                    <th>Sel</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Genre</th>
+                    <th>Edition</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each books as |book|}}
+                <tr>
+                    <td><input type="radio" id="select_{{@index}}" name="authorBooks" value="{{@index}}"></td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.isbn}}</td>
+                    <td>{{book.gene}}</td>
+                    <td>{{book.edition}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+            </colgroup>
+        </table>
+
+        <div>
+            <button formaction="/viewOthers" formmethod="post" type="submit" class="submitbtn"> Submit</button>
+            <button type="reset" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+</form>
