@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Dragon's Den</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Dragon's Den
+        </h1>
+        <h2>
+            Welcome to Dragon's Den, where learned peopled provide insight
+        </h2>
+    </header>
+    <!-- Head and header shares code across all pages -->
+
+    <!-- Start of the comment page -->
+    <main>
+        <h3>Comments Here</h3>
+        <div class="grid-container">
+            <div class="row">
+                <div id="bookInfo">
+                    <label for="aname"><b>Author</b></label>
+                    <input type="text" placeholder="Enter First & Last Name of the author" name="aname" required>
+
+                    <label for="btitle"><b>Book Title</b></label>
+                    <input type="text" placeholder="Enter book title" name="btitle" required>
+
+                    <label for="isbn"><b>ISBN</b></label>
+                    <input type="text" placeholder="Enter the book's ISBN" name="isbn" required>
+
+                    <label for="genre"><b>Genre</b></label>
+                    <input type="text" placeholder="Enter the book's genre" name="genre" required>
+
+                    <label for="edition"><b>Edition</b></label>
+                    <input type="text" placeholder="Enter the book's edition" name="edition" required>
+                </div>
+                <div id="commentArea">
+                    <label for="comments"><b>Comments</b></label>
+                    <form action="action_page.php" method="post">
+                        <div class="textarea">
+                            <textarea name="comments" id="comments" style="font-family: Arial, Helvetica, sans-serif;"> Comments here.</textarea>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <button type="submit" class="submitbtn"> Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer shares code across all pages  -->
+        <footer>
+            <div>
+                <h4> Developed by Team Percy Jackson</h4>
+                <a href="./privacy-policy.html">Read Our Privacy Policy</a><br /> &copy; 2021 Dragon's Den, Inc.
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
