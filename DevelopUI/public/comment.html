@@ -20,10 +20,40 @@
     </header>
     <!-- Head and header shares code across all pages -->
 
-    <!-- Start of the landing page -->
+    <!-- Start of the comment page -->
     <main>
-        <h1>Comment Page Here</h1>
-        <!-- End of the landing page -->
+        <h3>Comments Here</h3>
+        <div class="grid-container">
+            <div class="row">
+                <div id="bookInfo">
+                    <label for="aname"><b>Author</b></label>
+                    <input type="text" placeholder="Enter First & Last Name of the author" name="aname" required>
+
+                    <label for="btitle"><b>Book Title</b></label>
+                    <input type="text" placeholder="Enter book title" name="btitle" required>
+
+                    <label for="isbn"><b>ISBN</b></label>
+                    <input type="text" placeholder="Enter the book's ISBN" name="isbn" required>
+
+                    <label for="genre"><b>Genre</b></label>
+                    <input type="text" placeholder="Enter the book's genre" name="genre" required>
+
+                    <label for="edition"><b>Edition</b></label>
+                    <input type="text" placeholder="Enter the book's edition" name="edition" required>
+                </div>
+                <div id="commentArea">
+                    <label for="comments"><b>Comments</b></label>
+                    <form action="action_page.php" method="post">
+                        <div class="textarea">
+                            <textarea name="comments" id="comments" style="font-family: Arial, Helvetica, sans-serif;"> Comments here.</textarea>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <button type="submit" class="submitbtn"> Submit</button>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer shares code across all pages  -->
         <footer>

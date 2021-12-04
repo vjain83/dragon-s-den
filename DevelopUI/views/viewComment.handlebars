@@ -3,25 +3,25 @@
             <div class="row">
                 <div id="bookInfo">
                     <label for="aname"><b>Author</b></label>
-                    <input type="text" placeholder="Enter First & Last Name of the author" name="aname" required>
+                    <input type="text" placeholder="Author name displayed here" name="aname" required>
 
                     <label for="btitle"><b>Book Title</b></label>
-                    <input type="text" placeholder="Enter book title" name="btitle" required>
+                    <input type="text" placeholder="Book title displayed here" name="btitle" required>
 
                     <label for="isbn"><b>ISBN</b></label>
-                    <input type="text" placeholder="Enter the book's ISBN" name="isbn" required>
+                    <input type="text" placeholder="Book's ISBN displayed here" name="isbn" required>
 
                     <label for="genre"><b>Genre</b></label>
-                    <input type="text" placeholder="Enter the book's genre" name="genre" required>
+                    <input type="text" placeholder="Book's genre displayed here" name="genre" required>
 
                     <label for="edition"><b>Edition</b></label>
-                    <input type="text" placeholder="Enter the book's edition" name="edition" required>
+                    <input type="text" placeholder="Book's edition displayed here" name="edition" required>
                 </div>
                 <div id="commentArea">
                     <label for="comments"><b>Comments</b></label>
                     <form action="action_page.php" method="post">
                         <div class="textarea">
-                            <textarea name="comments" id="comments" style="font-family: Arial, Helvetica, sans-serif;"> Comments here.</textarea>
+                            {{!-- <textarea name="comments" id="comments" style="font-family: Arial, Helvetica, sans-serif;"> Comments here.</textarea> --}}
                         </div>
                     </form>
                 </div>
