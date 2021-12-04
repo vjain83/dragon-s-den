@@ -24,4 +24,12 @@ router.get('/selection', (req, res) => {
     res.render('selection')
 })
 
+router.get('/comment', (req, res) => {
+    res.render('comment')
+})
+
+router.get('/research', (req, res) => {
+    res.render('research')
+})
+
 module.exports = router;
