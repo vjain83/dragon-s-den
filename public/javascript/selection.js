@@ -14,7 +14,6 @@ function actionTaken(event) {
 
 
 
-
 // function actionTaken(event) {
 //     event.preventDefault();
 
