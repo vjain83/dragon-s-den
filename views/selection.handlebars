@@ -1,11 +1,20 @@
-<form role="form" enctype="application/x-www-form-urlencoded">
+<form role="form" enctype="application/x-www-form-urlencoded" class="actionTaken-form">
     <div class="container">
         <h3>Next Step</h3>
         <p>Please select whether you wish to provide comments on a book, or whether you wish to research other people's
             comments.</p>
+
+
         <hr>
 
-        <div>
+        <div style="text-align: center;">
+            <form>
+                <button formaction="/comment" formmethod="get" id="comment" class="signupbtn">Comment</button>
+                <button formaction="/research" formmethod="get" id="research" class="loginbtn">Research</button>
+            </form>
+        </div>
+
+        {{!-- <div>
             <div>
                 <div class="columnLeft">
                     <label class=" px-2" for="authorTitle"><b>Kindly select comment or research:</b></label>
@@ -13,11 +22,11 @@
                 <div class="columnRight">
                     <select name="commentSelection" id="commentSelection" class=" px-3" onchange="choiceChange(this)">
                         <option value="" disabled selected>Select your choice of action</option>
-                        <option value="c">Comment</option>
+                        <option id="comment" value="c">Comment</option>
                         <option value="r">Research</option>
                     </select>
-                </div>
-                <div id="author">
+                </div> --}}
+                {{!-- <div id="author">
                     <div class="columnLeft">
                         <label class=" px-2" for="authorTitle"><b>Kindly select author or title of the book:</b></label>
                     </div>
@@ -37,11 +46,14 @@
                 <input id="authorTitleInput" type="text" placeholder="Enter name of author or title of book"
                     name="authorTitleInput" required>
             </div>
-        </div>
+        </div> --}}
 
         <div>
-            <button formaction="/finalpage" formmethod="post" type="submit" class="submitbtn"> Submit</button>
-            <button type="reset" class="cancelbtn">Cancel</button>
+            {{!-- <button formaction="/finalpage" formmethod="post" type="submit" class="submitbtn"> Submit</button>
+            --}}
+            {{!-- <button id="submit" type="submit">Submit</button> --}}
+            <button id="logout" class="btn-no-style">Logout</button>
         </div>
     </div>
 </form>
+<script src="/javascript/selection.js"></script>

@@ -28,7 +28,7 @@ Book.init(
         },
 
         isbn: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         genre: {
             type: DataTypes.STRING
@@ -36,7 +36,7 @@ Book.init(
         },
 
         edition: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
 
     },
