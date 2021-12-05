@@ -1,13 +1,47 @@
-{{!-- <section>
-  <h2>Create Review</h2>
+<!-- Start of the comment page -->
+<main>
+  <h3>Comments Here</h3>
+  <div class="grid-container">
+    <div class="row">
+      <div id="bookInfo">
+        <label for="aname"><b>Author</b></label>
+        <input type="text" placeholder="Enter First & Last Name of the author" name="aname" id="author" required>
 
-<div>
-  <button type = "button" id="books">Books</button>
-</div>
-</section>
+        <label for="btitle"><b>Book Title</b></label>
+        <input type="text" placeholder="Enter book title" name="btitle" id="title" required>
 
+        <label for="isbn"><b>ISBN</b></label>
+        <input type="text" placeholder="Enter the book's ISBN" name="isbn" id="isbn" required>
 
-<script src="/javascript/comment"></script> --}}
+        <label for="genre"><b>Genre</b></label>
+        <input type="text" placeholder="Enter the book's genre" name="genre" id="gnere" required>
 
+        <label for="edition"><b>Edition</b></label>
+        <input type="text" placeholder="Enter the book's edition" name="edition" id="edition" required>
+      </div>
+      <div id="commentArea">
+        <label for="comments"><b>Comments</b></label>
+        <form action="action_page.php" method="post">
+          <div class="textarea">
+            <textarea name="comments" id="comments"
+              style="font-family: Arial, Helvetica, sans-serif;"> Comments here.</textarea>
+          </div>
+        </form>
+      </div>
+      <div>
+        <button type="submit" class="submitbtn"> Submit</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- Footer shares code across all pages  -->
+  <footer>
+    <div>
+      <h4> Developed by Team Percy Jackson</h4>
+      <a href="./privacy-policy.html">Read Our Privacy Policy</a><br /> &copy; 2021 Dragon's Den, Inc.
+    </div>
+  </footer>
+</main>
+<script src="/javascript/comment.js"></script>
 
+</body>

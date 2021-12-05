@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.render('dashboard', { loggedIn: true });
+    res.render('research', { loggedIn: true });
 });
 
 
