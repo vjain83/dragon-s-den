@@ -1,0 +1,42 @@
+<div class="mainPage">
+  <section>
+    <ol class="book-list">
+      <li> First Book with link <br> Author1 </li>
+      <li> Second Book with link <br> Author2 </li>
+      {{#each books as |book|}}
+      <li>
+        {{> post-info book }}
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+
+  <section id="bookDetails" class="comments">
+    <div id="bookDetails">
+      <h2>Book 1</h2>
+      <h4> Destription about the book</h4>
+
+    </div>
+
+    <textarea id="postComment"></textarea>
+    <button type="submit" id="submitComment">Send</button>
+  </section>
+</div>
+
+</body>
+
+{{!-- {{#if books.length}}
+<section>
+  <h2>Your Books</h2>
+  <ol>
+    {{#each books as |book|}}
+    <li>
+      {{> book-info book}}
+      <a href="/dashboard/edit/{{book.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}} --}}
+{{!--
+<script src="/javascript/books.js"></script> --}}

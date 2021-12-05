@@ -21,6 +21,7 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/selection', (req, res) => {
+    console.log("Selection in home")
     res.render('selection')
 })
 
@@ -30,6 +31,11 @@ router.get('/comment', (req, res) => {
 
 router.get('/research', (req, res) => {
     res.render('research')
+})
+
+router.get('/books', (req, res) => {
+    console.log("Books in home")
+    res.render('books')
 })
 
 module.exports = router;

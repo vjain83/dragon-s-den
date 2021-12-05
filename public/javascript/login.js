@@ -14,7 +14,7 @@ async function loginFormHandler(event) {
             headers: { 'content-type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/selection')
+            document.location.replace('selection')
         }
         else {
             alert(response.statusText)

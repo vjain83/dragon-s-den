@@ -62,4 +62,4 @@ async function bookInfoHandler(event) {
 
 
 
-document.querySelector('.book-info').addEventListener('submit', bookInfoHandler)
+document.querySelector('#submitComment').addEventListener('submit', bookInfoHandler)
