@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 })
 
-//get api/book/1 routes
+//get api/books/1 routes
 router.get('/:id', (req, res) => {
     Book.findOne({
         where: {
