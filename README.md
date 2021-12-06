@@ -25,6 +25,7 @@ THEN I am asked to save the information which will be stored in Dragon’s Den d
 
 ## Technologies Used
 Platforms: VS Code, Github, Heroku
+
 Libraries: Express.js, Node.js, MySQL, Sequelize, Bootstrap, EJS
 
 
@@ -38,6 +39,7 @@ Libraries: Express.js, Node.js, MySQL, Sequelize, Bootstrap, EJS
 
 ## Links
 Deployed Application: https://blooming-brook-84162.herokuapp.com/
+
 Github Repo: https://github.com/vjain83/dragons-den
 
 
