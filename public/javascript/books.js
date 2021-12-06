@@ -8,7 +8,7 @@ async function bookInfoHandler(event) {
 
     if (author && title && genre && isbn && edition) {
         const response = await fetch('/api/books', {
-            method: 'post',
+            method: 'get',
             body: JSON.stringify({
                 author,
                 title,
@@ -21,7 +21,7 @@ async function bookInfoHandler(event) {
         });
         if (response.ok) {
             console.log(response)
-            document.location.replace('/comment')
+            // document.location.replace('/comment')
         }
         else {
             alert(response.statusText);

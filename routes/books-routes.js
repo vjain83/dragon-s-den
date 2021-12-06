@@ -2,8 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Book, Reader, Review } = require('../models')
 
-router.get('/books', (req, res) => {
-    console.log("Called books-routes.js get")
+router.get('/', (req, res) => {
     Book.findAll({
         attributes: [
             'id',
@@ -12,10 +11,9 @@ router.get('/books', (req, res) => {
             'isbn'
         ]
     }).then(dbBookData => {
-        console.log("Book data recieved ", dbBookData)
         // serialize data before passing to template
         const books = dbBookData.map(book => book.get({ plain: true }));
-        res.render('books', { books, loggedIn: true });
+        res.render('books', { books, loggedIn: true, selectedId: 1 });
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);

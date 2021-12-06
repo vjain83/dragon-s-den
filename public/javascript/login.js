@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
             document.location.replace('selection')
         }
         else {
-            alert(response.statusText)
+            alert("Username or password does not match with our database")
         }
     }
 }

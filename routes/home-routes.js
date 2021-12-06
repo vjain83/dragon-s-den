@@ -33,9 +33,9 @@ router.get('/research', (req, res) => {
     res.render('research')
 })
 
-router.get('/books', (req, res) => {
-    console.log("Books in home")
-    res.render('books')
-})
+// router.get('/books', (req, res) => {
+//     console.log("Books in home")
+//     res.render('books')
+// })
 
 module.exports = router;

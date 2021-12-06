@@ -5,7 +5,7 @@ const { Book, Reader, Review } = require('../models')
 
 // post review
 router.post('/', (req, res) => {
-
+    console.log("In comment post")
     Review.create({
         review_text: req.body.review_text,
         book_id: req.body.book_id,

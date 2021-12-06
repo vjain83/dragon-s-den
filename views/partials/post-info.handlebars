@@ -1,10 +1,5 @@
-<article class="post">
-  <div class="title">
-    <p {{review_text}}</p>
-  </div>
+<article class="book">
   <div class="meta">
-    {{reader.username}} on {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/books/{{id}}">{{title}}</a>
   </div>
 </article>

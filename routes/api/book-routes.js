@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Book, Review, Reader } = require('../../models')
 
 //get api/books routes
-
 router.get('/', (req, res) => {
     Book.findAll().then(dbBookData => res.json(dbBookData))
         .catch(err => {
@@ -11,7 +10,8 @@ router.get('/', (req, res) => {
         })
 
 })
-//get api/books/1 routes
+
+//get api/book/1 routes
 router.get('/:id', (req, res) => {
     Book.findOne({
         where: {
